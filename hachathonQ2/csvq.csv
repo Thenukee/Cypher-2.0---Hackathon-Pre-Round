@@ -1,0 +1,22 @@
+customer_id,name,age,location,purchase_history,,Item Name,Price Per Item ($)
+1001,John Doe,30,New York,"Shirt,100;Hat,20
+",,Shirt,10
+1002,Jane Smith,25,Los Angelese,"Dress,150;Shoes,75",,Hat,8
+1003,Michale Lee,42,Chicago,"Book,25;Headphones,50",,Dress,17
+1004,Sarah Garcia,18,Miami,"Phone case,20;T-shirt,15",,Shoes,30
+1005,David Kim,60,Los Angelese,"Watch,200;Sunglasses,30",,Book,2
+1006,Emily Jones,35,Atlanta,"Laptop,500;Charger,20",,T-shirt,11
+1007,Robert Hernandez,22,Houston,"Speaker,120;Cable,10",,Sweatshirt,14
+1008,Amanda Miller,48,Los Angelese,"Purse,80;Wallet,40",,Jeans,12
+1009,William Davis,19,Los Angelese,"Sweatshirt,60;Jeans,45",,Purse,27
+1010,"Elizabeth Wilson,",55,Miami,"Tablet,300;Case,25",,Wallet,25
+,,,,,,Watch,100
+,,,,,,Sunglasses,45
+,,,,,,Headphones,700
+,,,,,,Phonecase,4
+,,,,,,Laptop,800
+,,,,,,Charger,200
+,,,,,,Speaker,550
+,,,,,,Cable,200
+,,,,,,Tablet,750
+,,,,,,Case,120
