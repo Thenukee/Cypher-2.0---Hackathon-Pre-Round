@@ -60,7 +60,7 @@ def analyze_text(file_path):
         "Longest Sentence": longest_sentence,
         "Shortest Sentence": shortest_sentence,
         "Percentage of Uppercase Letters": percentage_uppercase,
-        "List 5 Most Frequent Bigrams": most_frequent_bigrams
+        "List 5 Most Frequent Bigrams\n": most_frequent_bigrams
     }
 
     # Plot Word Cloud
@@ -76,25 +76,43 @@ def display_output(input_text, output):
     window = tk.Tk()
     window.title("Text Analysis Results")
 
+    # Make the window resizable
+    window.resizable(True, True)
+
+    # Create a frame for the left side (input text)
+    input_frame = tk.Frame(window)
+    input_frame.grid(row=0, column=0, padx=10, pady=10)
+
     # Create a text widget to display the input text
-    input_text_widget = scrolledtext.ScrolledText(window, width=80, height=10, font=("Dubai", 12))
+    input_text_widget = scrolledtext.ScrolledText(input_frame, width=40, height=20, font=("Dubai", 12))
     input_text_widget.pack()
     input_text_widget.insert(tk.END, input_text)
     input_text_widget.config(state=tk.DISABLED)
 
+    # Create a frame for the right side (output)
+    output_frame = tk.Frame(window)
+    output_frame.grid(row=0, column=1, padx=10, pady=10)
+
     # Create a text widget to display the output
-    output_text_widget = scrolledtext.ScrolledText(window, width=80, height=20, font=("Dubai", 12, "bold"))
+    output_text_widget = scrolledtext.ScrolledText(output_frame, width=40, height=20, font=("Dubai", 12))
     output_text_widget.pack()
 
-    # Combine output values into a single string with bold font
+    # Combine output values into a single string
     output_string = "\n".join([f"{key}: {value}" for key, value in output.items()])
 
     # Insert the output string into the text area
     output_text_widget.insert(tk.END, output_string)
+
+    # Change the color of the output text to red
+    output_text_widget.tag_configure("red", foreground="red")
+    output_text_widget.tag_add("red", "1.0", "end")
+
+    # Disable editing
     output_text_widget.config(state=tk.DISABLED)
 
     # Display the GUI window
     window.mainloop()
+
 
 # Call the analyze_text function and display the output in the GUI
 file_path = 'newtxt.txt'
